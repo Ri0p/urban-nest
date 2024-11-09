@@ -52,8 +52,8 @@ const ProductCarousel: React.FC = () => {
             className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center"
             style={{
               width: '300px',
-              height: '500px', 
-              minWidth: '260px', 
+              height: '500px',
+              minWidth: '260px',
             }}
           >
             {/* Link wrapping entire product card */}
@@ -62,8 +62,8 @@ const ProductCarousel: React.FC = () => {
               <div
                 className="product-image"
                 style={{
-                  width: '300px',  
-                  height: '350px', 
+                  width: '300px',
+                  height: '350px',
                   borderRadius: '8px 8px 0 0',
                   overflow: 'hidden',
                 }}
@@ -82,7 +82,7 @@ const ProductCarousel: React.FC = () => {
                       e.preventDefault();
                       toggleFavorite(product.id);
                     }}
-                    className={`p-1 rounded-full ${favorites.includes(product.id) ? 'text-blue-500' : 'text-gray-400'}`}
+                    className={`p-1 rounded-full ${favorites.includes(product.id) ? 'text-[#22637E]' : 'text-gray-400'}`}
                   >
                     <FaHeart className="h-5 w-5" />
                   </button>

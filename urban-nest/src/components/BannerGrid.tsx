@@ -16,7 +16,7 @@ const BannerGrid: React.FC = () => {
     >
       {/* Large screen layout */}
       <div
-        className="hidden md:grid md:grid-cols-[548px_592px] md:gap-4 justify-center" // Added gap between images
+        className="hidden md:grid md:grid-cols-[548px_592px] md:gap-4 justify-center" 
         style={{ height: "598px" }}
       >
         {/* Left Photo */}

@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Signup from "./components/SignUp"; 
@@ -18,12 +17,12 @@ import { CartProvider } from "./components/CartContext";
 import "swiper/swiper-bundle.css";
 import Login from "./components/Login";
 import { useNavigate } from "react-router-dom"; 
-import PrivateRoute from "./components/PrivateRoute"; // Import PrivateRoute
+import PrivateRoute from "./components/PrivateRoute"; 
 
 const App = () => {
   const location = useLocation();
-  const noNavbarPaths = ["/", "/signup", "/login"]; // Paths without Navbar
-  const noFooterPaths = ["/", "/signup", "/login"]; // Paths without Footer
+  const noNavbarPaths = ["/", "/signup", "/login"]; 
+  const noFooterPaths = ["/", "/signup", "/login"]; 
   const navigate = useNavigate(); 
   const handleSuccess = () => {
     navigate("/home"); 

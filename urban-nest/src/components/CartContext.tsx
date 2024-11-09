@@ -35,13 +35,13 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((i) => i.id === item.id);
       if (existingItem) {
-        // If the item already exists in the cart, increase the quantity by 1
+        // If the item already exists in the cart, increase the quantity by 1, not the total quantity
         return prevItems.map((i) =>
           i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
         );
       }
-      // If the item doesn't exist, add it to the cart with the initial quantity of 1
-      return [...prevItems, { ...item, quantity: 1 }];
+      // If the item doesn't exist, add it to the cart with the specified quantity (1 by default)
+      return [...prevItems, { ...item }];
     });
   };
 
