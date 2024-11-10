@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
 import { useNavigate } from 'react-router-dom';
+import { FaTrashAlt } from 'react-icons/fa'; // Importing the trash icon from react-icons
 
 const CheckoutDetailsPage: React.FC = () => {
   const { cartItems, updateItemQuantity, removeItem } = useContext(CartContext);
@@ -19,31 +20,30 @@ const CheckoutDetailsPage: React.FC = () => {
     <div className="p-4">
       <h1 className="text-3xl font-bold text-center">Check Out</h1>
 
-      <div className="flex justify-between items-center mt-6">
-        {/* Step indicators */}
-        <div className="flex flex-col items-center">
+      {/* Step Indicators */}
+      <div className="flex justify-center items-center mt-6">
+        <div className="flex flex-col items-center mx-4">
           <div className="w-8 h-8 bg-[#22637E] rounded-full flex items-center justify-center mb-1">
             <span className="text-white">✔</span> {/* Ticked Circle in White */}
           </div>
           <span className="text-center text-[#22637E]">Shopping cart</span>
         </div>
-        <div className="w-full h-[2px] bg-[#22637E]" />
+        <div className="w-16 h-[2px] bg-[#22637E]" />
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mx-4">
           <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center mb-1">
             <span className="text-white">2</span> {/* Circle for current step */}
           </div>
           <span className="text-center text-black">Checkout details</span>
         </div>
-        <div className="w-full h-[2px] bg-black" />
+        <div className="w-16 h-[2px] bg-black" />
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mx-4">
           <div className="w-8 h-8 bg-[#6C7275] rounded-full flex items-center justify-center mb-1">
             <span className="text-white">3</span> {/* Circle for pending step */}
           </div>
           <span className="text-center text-[#6C7275]">Order complete</span>
         </div>
-        <div className="w-full h-[2px] bg-[#6C72775]" />
       </div>
 
       <div className="flex flex-col md:flex-row justify-between mt-8 space-y-4 md:space-y-0">
@@ -82,7 +82,6 @@ const CheckoutDetailsPage: React.FC = () => {
                 <option value="">Select a country</option>
                 <option value="US">United States</option>
                 <option value="CA">Canada</option>
-                {/* Add more countries as needed */}
               </select>
             </div>
             <div className="mt-2">
@@ -141,7 +140,7 @@ const CheckoutDetailsPage: React.FC = () => {
                       className="text-red-500"
                       onClick={() => removeItem(item.id)} 
                     >
-                      Delete
+                      <FaTrashAlt /> {/* Red Garbage Icon */}
                     </button>
                   </div>
                   <div className="flex justify-between items-center">
