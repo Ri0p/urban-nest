@@ -45,7 +45,7 @@ const OrderCompletePage: React.FC = () => {
         {/* Order Details */}
         <div className="mt-4 text-[#6C7275]">
           <p className="text-black">Order code: #12345</p>
-          <p className="text-black">Date: November 1, 2024</p>
+          <p className="text-black">Date: November 14, 2024</p>
           <p className="text-black">Total: {location.state.grandTotal}</p>
           <p className="text-black">Payment method: Credit Card</p>
         </div>

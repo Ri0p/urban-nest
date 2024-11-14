@@ -20,7 +20,7 @@ const CartPage: React.FC = () => {
     }
   }, [id]);
 
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const totalPrice = cartItems.reduce((acc: number, item: { price: number; quantity: number; }) => acc + item.price * item.quantity, 0);
   const shipping = 5; 
   const tax = totalPrice * 0.1; 
   const grandTotal = totalPrice + shipping + tax;
@@ -69,10 +69,10 @@ const CartPage: React.FC = () => {
       <div className="flex-grow">
         <h1 className="text-2xl font-bold">Cart</h1>
         <div>
-          {cartItems.map((item) => (
+          {cartItems.map((item: { id: React.Key | null | undefined; image: string | undefined; title: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined; price: number; quantity: string | number | readonly string[] | undefined; }) => (
             <div key={item.id} className="flex items-center justify-between my-4">
               {/* Product image */}
-              <img src={item.image} alt={item.title} className="w-20 h-20 object-cover" />
+              <img src={item.image}  className="w-20 h-20 object-cover" />
               
               {/* Product title, price, and quantity controls */}
               <div className="flex-grow flex items-center justify-between ml-4">

@@ -8,7 +8,7 @@ import Newsletter from './Newsletter';
 const Home: React.FC = () => {
   return (
     <div>
-      {/* Slider Section */}
+      
       <section>
         <Slider />
       </section>
@@ -31,22 +31,22 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Banner Grid Section */}
+      
       <section>
         <BannerGrid />
       </section>
 
-      {/* Product Carousel Section */}
+      
       <section>
         <ProductCarousel />
       </section>
 
-      {/* Values Section */}
+      
       <section>
         <ValuesSection />
       </section>
 
-      {/* Newsletter Section */}
+      
       <section>
         <Newsletter />
       </section>

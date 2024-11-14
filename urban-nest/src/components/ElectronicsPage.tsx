@@ -54,7 +54,7 @@ const ElectronicsPage: React.FC = () => {
         ))}
       </div>
 
-      {/* Newsletter Section below products */}
+      
       <Newsletter />
     </div>
   );

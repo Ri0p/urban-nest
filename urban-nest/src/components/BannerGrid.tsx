@@ -40,7 +40,7 @@ const BannerGrid: React.FC = () => {
         </div>
 
         {/* Right Photos */}
-        <div className="flex flex-col gap-4"> {/* Added gap here for space between top and bottom right images */}
+        <div className="flex flex-col gap-4"> 
           {/* Top Right Photo */}
           <div className="relative" style={{ width: "100%", height: "287px" }}>
             <img src={rightTopImage} alt="Men's Clothing" className="w-full h-full object-cover" />

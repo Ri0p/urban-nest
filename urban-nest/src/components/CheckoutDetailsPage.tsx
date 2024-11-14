@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { FaTrashAlt } from 'react-icons/fa'; // Importing the trash icon from react-icons
 
 const CheckoutDetailsPage: React.FC = () => {
-  const { cartItems, updateItemQuantity, removeItem } = useContext(CartContext);
+  const { cartItems , updateItemQuantity, removeItem } = useContext(CartContext);
   const navigate = useNavigate();
 
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const totalPrice = cartItems.reduce((acc: number, item: { price: number; quantity: number; }) => acc + item.price * item.quantity, 0);
   const shipping = 5; 
   const tax = totalPrice * 0.1; 
   const grandTotal = totalPrice + shipping + tax; 
@@ -53,19 +53,19 @@ const CheckoutDetailsPage: React.FC = () => {
             <h2 className="text-xl font-bold">Contact Information</h2>
             <div className="mt-2">
               <label className="block">First Name:</label>
-              <input type="text" className="border p-2 w-full" required />
+              <input type="text" className="border border-gray-300 p-2 rounded w-full" required />
             </div>
             <div className="mt-2">
               <label className="block">Last Name:</label>
-              <input type="text" className="border p-2 w-full" required />
+              <input type="text" className="border border-gray-300 p-2 rounded w-full" required />
             </div>
             <div className="mt-2">
               <label className="block">Phone Number:</label>
-              <input type="tel" className="border p-2 w-full" required />
+              <input type="tel" className="border border-gray-300 p-2 rounded w-full" required />
             </div>
             <div className="mt-2">
               <label className="block">Email Address:</label>
-              <input type="email" className="border p-2 w-full" required />
+              <input type="email" className="border border-gray-300 p-2 rounded w-full" required />
             </div>
           </div>
 
@@ -74,11 +74,11 @@ const CheckoutDetailsPage: React.FC = () => {
             <h2 className="text-xl font-bold">Shipping Address</h2>
             <div className="mt-2">
               <label className="block">Street Address:</label>
-              <input type="text" className="border p-2 w-full" required />
+              <input type="text" className="border border-gray-300 p-2 rounded w-full" required />
             </div>
             <div className="mt-2">
               <label className="block">Country:</label>
-              <select className="border p-2 w-full" required>
+              <select className="border border-gray-300 p-2 rounded w-full" required>
                 <option value="">Select a country</option>
                 <option value="US">United States</option>
                 <option value="CA">Canada</option>
@@ -86,11 +86,11 @@ const CheckoutDetailsPage: React.FC = () => {
             </div>
             <div className="mt-2">
               <label className="block">Town / City:</label>
-              <input type="text" className="border p-2 w-full" required />
+              <input type="text" className="border border-gray-300 p-2 rounded w-full" required />
             </div>
             <div className="mt-2">
               <label className="block">ZIP Code:</label>
-              <input type="text" className="border p-2 w-full" required />
+              <input type="text" className="border border-gray-300 p-2 rounded w-full" required />
             </div>
           </div>
 
@@ -111,16 +111,16 @@ const CheckoutDetailsPage: React.FC = () => {
             </div>
             <div className="mt-2">
               <label className="block">Card Number:</label>
-              <input type="text" className="border p-2 w-full" />
+              <input type="text" className="border border-gray-300 p-2 rounded w-full" />
             </div>
             <div className="mt-2 grid grid-cols-2 gap-2">
               <div>
                 <label className="block">Expiration Date:</label>
-                <input type="text" placeholder="MM/YY" className="border p-2 w-full" />
+                <input type="text" placeholder="MM/YY" className="border border-gray-300 p-2 rounded w-full" />
               </div>
               <div>
                 <label className="block">CVC:</label>
-                <input type="text" className="border p-2 w-full" />
+                <input type="text" className="border border-gray-300 p-2 rounded w-full" />
               </div>
             </div>
           </div>

@@ -14,7 +14,7 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">You need to login!</h1>
           <p>Please log in to access this page.</p>
-          {/* Redirect to login page after showing the message */}
+          
           <Navigate to="/" replace />
         </div>
       </div>

@@ -5,9 +5,9 @@ const MyAccountPage: React.FC = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Clear the token from local storage
+    
     localStorage.removeItem("token");
-    // Navigate to the login page
+   
     navigate("/");
   };
 

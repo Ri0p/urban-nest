@@ -5,9 +5,9 @@ const Newsletter: React.FC = () => {
 
   const handleSubscribe = (event: React.FormEvent) => {
     event.preventDefault();
-    // Handle the subscription logic here
+    
     console.log("Subscribed with email:", email);
-    setEmail(""); // Clear the input field after subscription
+    setEmail(""); 
   };
 
   return (
